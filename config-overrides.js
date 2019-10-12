@@ -1,6 +1,23 @@
-const rewireStyledComponents = require('react-app-rewire-styled-components');
+const { override, fixBabelImports, addLessLoader, addBabelPlugin } = require('customize-cra');
+const modifyVars = require('./src/config/styles/modifyVars');
 
-module.exports = function override(config, env) {
-  config = rewireStyledComponents(config, env);
-  return config;
-};
+module.exports = override(
+  addBabelPlugin(["styled-components", {displayName: true}]),
+
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true,
+
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars
+  })
+
+);
+
+// module.exports = function override(config, env) {
+//   config = rewireStyledComponents(config, env);
+//   return config;
+// };
