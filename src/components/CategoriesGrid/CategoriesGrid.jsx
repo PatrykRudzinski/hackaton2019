@@ -1,6 +1,7 @@
 import React from 'react';
   
-const CategoriesGrid = () => {
+const CategoriesGrid = (props) => {
+    console.log(props);
   return (
     <>
       CategoriesGrid
