@@ -1,16 +1,24 @@
-import React from 'react';
-import { withApollo } from 'react-apollo';
-import Main from '../../../containers/Main';
+import React, {useState} from 'react';
+import LayoutCenter from "../../../containers/Layout/LayoutCenter";
+import LoginForm from '../../../components/LoginForm';
+import {Redirect} from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 const Login = () => {
+    const cookies = new Cookies();
+    const [redirect, setRedirect] = useState(cookies.get('jwttoken') && cookies.get('role'));
+
+    if (redirect) {
+        return <Redirect to='/'/>
+    }
+
     return (
-      <Main>
-      </Main>
+        <LayoutCenter>
+            <div>
+                <LoginForm redirect={setRedirect}/>
+            </div>
+        </LayoutCenter>
     )
 };
 
-Login.defaultProps = {};
-
-Login.propTypes = {};
-
-export default withApollo(Login);
+export default Login;
