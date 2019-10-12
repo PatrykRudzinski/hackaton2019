@@ -1,9 +1,11 @@
-const green = '#00917e';
-const lightGreen = '#c2e3e0';
+const violetblue = '#716BCD';
+const white = '#fff';
+const steel = '#7A7D80';
+const bg = '#E3E76C';
 
 module.exports = {
-  '@primary-color': green,
-  '@layout-header-background': lightGreen,
+  '@primary-color': violetblue,
+  '@layout-header-background': violetblue,
   '@layout-header-padding': '.25rem',
 };
 
