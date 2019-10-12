@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Login, Products, Error } from '../views';
+import {Login, Dashboard, Error, AddNotice} from '../views';
 import PrivateRoute from './_components/PrivateRoute';
 
 const Router = () => (
@@ -8,10 +8,14 @@ const Router = () => (
     <Switch>
       <Route path='/login' component={Login}/>
       <PrivateRoute
-          path='/products'
-          component={Products}
+          path='/'
+          component={Dashboard}
           redirect='/login'
-          availableFor={['admin']}
+      />
+      <PrivateRoute
+          path='/'
+          component={AddNotice}
+          redirect='/login'
       />
       <Route
         path='*'
