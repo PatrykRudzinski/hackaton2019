@@ -13,7 +13,7 @@ const Router = () => (
           redirect='/login'
       />
       <PrivateRoute
-          path='/'
+          path='/add-notice'
           component={AddNotice}
           redirect='/login'
       />

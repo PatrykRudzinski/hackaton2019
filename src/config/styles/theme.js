@@ -5,7 +5,7 @@ export default {
     },
     layout : {
         containerWidth : '1400px',
-        navigationHeight: '50px',
+        headerHeight: '64px'
     },
     font : {
         s : '0.75rem',
@@ -19,5 +19,8 @@ export default {
         block : 'block',
         inline : 'inline',
         inlineBlock : 'inline-block'
-    }
+    },
+    zIndex: {
+      navigation: 100,
+    },
 }
