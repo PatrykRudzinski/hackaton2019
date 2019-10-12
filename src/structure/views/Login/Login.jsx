@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {withApollo} from 'react-apollo';
 import LayoutCenter from "../../../containers/Layout/LayoutCenter";
 import LoginForm from '../../../components/LoginForm';
 import {Redirect} from 'react-router-dom';
@@ -9,7 +8,9 @@ import FormContainer from "../../../containers/Layout/FormContainer";
 
 const Login = () => {
     const cookies = new Cookies();
-    const [redirect, setRedirect] = useState(cookies.get('jwttoken') && cookies.get('role'));
+    const [redirect, setRedirect] = useState(cookies.get('token')
+        // && cookies.get('role')
+    );
 
     if (redirect) {
         return <Redirect to='/'/>
@@ -28,5 +29,5 @@ Login.defaultProps = {};
 
 Login.propTypes = {};
 
-export default withApollo(Login);
+export default Login;
 

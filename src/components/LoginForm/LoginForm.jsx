@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {
   Form, Input, Button,
 } from 'antd';
-import {withApollo} from "react-apollo";
+import {useApolloClient} from '@apollo/react-hooks';
 import Cookies from 'universal-cookie';
 import PropTypes from 'prop-types';
 import GET_TOKEN from '../../gql/mutations/GET_TOKEN';
@@ -11,8 +11,8 @@ const hasErrors = fieldsError => {
   return Object.keys(fieldsError).some(field => fieldsError[ field ]);
 };
 
-const LoginForm = ({form, client, redirect}) => {
-
+const LoginForm = ({form, redirect}) => {
+const client = useApolloClient();
   const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched, validateFields} = form;
   const cookies = new Cookies();
 
@@ -102,4 +102,4 @@ LoginForm.propTypes = {
 
 const AntLoginForm = Form.create({name: 'horizontal_login'})(LoginForm);
 
-export default withApollo(AntLoginForm);
+export default AntLoginForm;
