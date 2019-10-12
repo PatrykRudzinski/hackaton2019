@@ -10,6 +10,7 @@ const StyledContent = styled(Content)`
   margin: 0 auto;
   width: 100%;
   min-height: 100vh !important;
+  min-height: calc(var(--vh, 1vh) * 100) !important;
   max-width: ${({theme}) => theme.layout.containerWidth};
   position: relative;
 `;
