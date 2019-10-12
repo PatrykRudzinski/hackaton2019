@@ -1,37 +1,39 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
-import {Menu, Icon, Button} from 'antd';
+import {Menu, Icon} from 'antd';
 import {withRouter} from 'react-router';
 import styled from 'styled-components';
 
-// const styledItem = styled(Item)`
-
-// `
-
 const {Item} = Menu;
+
+const StyledItem = styled(Item)`
+  border: 2px solid #7A7D80;
+`;
+
+
 
 const Navigation = ({horizontal}) => {
 
   return (
       <Menu mode={horizontal ? 'horizontal' : 'inline'}>
-          <Item key="1">
+          <StyledItem key="1">
             <NavLink to='/'>
               <Icon type="home" />
-              <span>Potrzebuje pomocy<Button type="primary">dsad</Button></span>
+              <span>Powiadomienia</span>
             </NavLink>
-          </Item>
-          <Item key="2">
-            <NavLink to='/'>
-              <Icon type="heart" />
-              <span>Chce pomoc</span>
-            </NavLink>
-          </Item>
-          <Item key="3">
+          </StyledItem>
+          <StyledItem key="2">
             <NavLink to='/'>
               <Icon type="setting" />
               <span>Ustawienia</span>
             </NavLink>
-          </Item>
+          </StyledItem>
+          <StyledItem end key="3">
+            <NavLink to='/'>
+              <Icon type="poweroff"/>
+              <span>Wyloguj</span>
+            </NavLink>
+          </StyledItem>
       </Menu>
   );
 };
