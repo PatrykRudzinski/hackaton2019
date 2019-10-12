@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
+import {withApollo} from 'react-apollo';
 import LayoutCenter from "../../../containers/Layout/LayoutCenter";
 import LoginForm from '../../../components/LoginForm';
 import {Redirect} from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import FormContainer from "../../../containers/Layout/FormContainer";
+
 
 const Login = () => {
     const cookies = new Cookies();
@@ -14,11 +17,16 @@ const Login = () => {
 
     return (
         <LayoutCenter>
-            <div>
+            <FormContainer>
                 <LoginForm redirect={setRedirect}/>
-            </div>
+            </FormContainer>
         </LayoutCenter>
     )
 };
 
-export default Login;
+Login.defaultProps = {};
+
+Login.propTypes = {};
+
+export default withApollo(Login);
+
