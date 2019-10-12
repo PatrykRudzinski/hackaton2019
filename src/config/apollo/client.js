@@ -7,7 +7,7 @@ import Cookie from 'universal-cookie';
 const cookies = new Cookie();
 
 const authLink = setContext((_, {headers}) => {
-  const token = cookies.get('jwttoken');
+  const token = cookies.get('token');
   return {
     headers: {
       ...headers,
