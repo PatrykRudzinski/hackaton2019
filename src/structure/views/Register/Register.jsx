@@ -1,7 +1,7 @@
 import React from 'react';
-import RegisterForm from '../../../components/RegisterForm/RegisterForm';
-import LayoutCenter from '../../../containers/Layout/LayoutCenter/LayoutCenter';
-  
+import RegisterForm from './../../../components/RegisterForm';
+import LayoutCenter from './../../../containers/Layout/LayoutCenter/LayoutCenter';
+
 const Register = () => {
   return (
     <LayoutCenter>

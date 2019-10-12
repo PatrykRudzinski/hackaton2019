@@ -4,8 +4,6 @@ import {setContext} from 'apollo-link-context';
 import {createUploadLink} from 'apollo-upload-client';
 import Cookie from 'universal-cookie';
 
-import {newProduct} from './initState';
-
 const cookies = new Cookie();
 
 const authLink = setContext((_, {headers}) => {
@@ -27,12 +25,6 @@ const client = new ApolloClient({
       return object.id || object._id
     }
   })
-});
-
-client.writeData({
-  data: {
-    newProduct,
-  }
 });
 
 export default client;
