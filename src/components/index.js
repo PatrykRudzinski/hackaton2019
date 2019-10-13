@@ -9,6 +9,8 @@ import Logo from './Logo';
 import RegisterForm from './RegisterForm';
 import Title from './Title';
 import DetailsForm from './DetailsForm';
+import Feedback from './Feedback';
+import ButtonLarge from './ButtonLarge';
 
 export {
 	CategoriesGrid,
@@ -22,4 +24,6 @@ export {
 	Title,
 	PlacesGrid,
 	DetailsForm,
+	Feedback,
+	ButtonLarge,
 };
