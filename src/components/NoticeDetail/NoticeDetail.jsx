@@ -1,8 +1,6 @@
 import React from 'react';
 import {Button, Icon} from 'antd';
 import {withRouter} from 'react-router-dom'
-import React, {useState} from 'react';
-import {Button} from 'antd';
 import {useApolloClient} from '@apollo/react-hooks';
 import PigeonMaps from "../PigeonMap";
 import OFFER_ASSISTANCE from "../../graphql/mutations/OFFER_ASSISTANCE";
