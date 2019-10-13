@@ -5,7 +5,19 @@ const GET_NOTICES = gql`
         general {
             allNotices{
               id
+              category
               content
+              needy {
+                displayName
+              }
+              address {
+                properties {
+                    description
+                }
+                geometry {
+                    coordinates
+                }
+              }
             }
         }
     }
