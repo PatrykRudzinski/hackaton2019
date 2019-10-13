@@ -77,5 +77,3 @@ createComponent().then( () => {
     updateGeneralIndex();
   }
 });
-
-updateGeneralIndex();

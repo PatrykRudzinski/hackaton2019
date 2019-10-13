@@ -5,7 +5,7 @@ import {
 import {useApolloClient} from '@apollo/react-hooks';
 import Cookies from 'universal-cookie';
 import PropTypes from 'prop-types';
-import GET_TOKEN from '../../gql/mutations/GET_TOKEN';
+import GET_TOKEN from '../../graphql/mutations/GET_TOKEN';
 
 const hasErrors = fieldsError => {
   return Object.keys(fieldsError).some(field => fieldsError[ field ]);
