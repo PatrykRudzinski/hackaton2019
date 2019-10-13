@@ -19,7 +19,6 @@ const PigeonMap = ({notice}) => {
     return (
         <div className="map">
             <Map
-                width='100%'
                 height='50vh'
                 defaultCenter={notice.address.geometry.coordinates.reverse()}
                 defaultZoom={13}
