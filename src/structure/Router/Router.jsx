@@ -4,8 +4,8 @@ import {Login, Dashboard, Error, Register, NeedHelp, OfferHelp} from '../views';
 import {CategorySelect, DetailsSelect, PlaceSelect, Success} from '../views/NeedHelp';
 import PrivateRoute from './_components/PrivateRoute';
 import NoticeDetailsSelect from "../views/OfferHelp/NoticeDetailsSelect/NoticeDetailsSelect";
+import OfferHelpMap from "../views/OfferHelpMap/OfferHelpMap";
 import OfferSuccess from "../views/OfferHelp/Success/Success";
-
 
 const Router = () => (
     <BrowserRouter>
@@ -17,6 +17,11 @@ const Router = () => (
                 component={NoticeDetailsSelect}
                 redirect='/login'
                 name="notice-details-select"
+            />
+            <PrivateRoute
+                path='/offer-help/map/'
+                component={OfferHelpMap}
+                redirect='/login'
             />
             <PrivateRoute
                 path='/offer-help'
