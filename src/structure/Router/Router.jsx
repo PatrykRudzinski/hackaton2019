@@ -5,6 +5,7 @@ import {CategorySelect, DetailsSelect, PlaceSelect, Success} from '../views/Need
 import PrivateRoute from './_components/PrivateRoute';
 import NoticeDetailsSelect from "../views/OfferHelp/NoticeDetailsSelect/NoticeDetailsSelect";
 import OfferHelpMap from "../views/OfferHelpMap/OfferHelpMap";
+import OfferSuccess from "../views/OfferHelp/Success/Success";
 
 const Router = () => (
     <BrowserRouter>
@@ -25,6 +26,11 @@ const Router = () => (
             <PrivateRoute
                 path='/offer-help'
                 component={OfferHelp}
+                redirect='/login'
+            />
+            <PrivateRoute
+                path='/offer-success'
+                component={OfferSuccess}
                 redirect='/login'
             />
             <PrivateRoute

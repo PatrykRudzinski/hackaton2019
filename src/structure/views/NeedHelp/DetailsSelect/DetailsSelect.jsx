@@ -37,7 +37,7 @@ const DetailsSelect = ({location: {state}}) => {
             if (data.createNotice.errors) {
                 setError(true)
             } else {
-                setRedirect(true);
+                setRedirect(e);
             }
         });
     };
@@ -45,7 +45,10 @@ const DetailsSelect = ({location: {state}}) => {
         return <Redirect
             to={{
                 pathname: '/need-help/success',
-                state,
+                state: {
+                    ...state,
+                    description: redirect,
+                },
             }}
         />
     }
