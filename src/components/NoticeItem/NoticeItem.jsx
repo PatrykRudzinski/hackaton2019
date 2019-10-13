@@ -11,14 +11,36 @@ const StyledLink = styled(Link)`
   display: flex;
   min-height: 80%;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-around;
 `;
+
+const StyledName = styled.span`
+  font-weight: 700;
+  font-size: 0.8em;
+`
+
+const StyledCategory = styled.div`
+  display: flex;
+  width: 20%; 
+  align-items: center;
+  font-size: 0.8em;
+
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: 30px !important;
+  
+`
 
 const NoticeItem = ({to, category_name, category_icon, needy}) => (
     <StyledButton>
         <StyledLink to={to}>
-            <b>{needy.displayName}</b>: {category_icon} {category_name}
+          <StyledName>{needy.displayName}</StyledName>
+          <StyledCategory>
+            <StyledIcon type={category_icon}/> 
+            <span>{category_name}</span>
+          </StyledCategory>
         </StyledLink>
     </StyledButton>
 );
