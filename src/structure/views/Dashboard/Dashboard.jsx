@@ -35,15 +35,15 @@ const Dashboard = () => {
         <LayoutGeneral>
             <StyledContainer>
                 <StyledButton>
-                    <StyledLink to='/offer-help'>
-                        <Heart/>
-                        <span>Chcę pomagać</span>
-                    </StyledLink>
-                </StyledButton>
-                <StyledButton>
                     <StyledLink to='/need-help'>
                         <Help/>
                         <span>Potrzebuję pomocy</span>
+                    </StyledLink>
+                </StyledButton>
+                <StyledButton>
+                    <StyledLink to='/offer-help'>
+                        <Heart/>
+                        <span>Chcę pomagać</span>
                     </StyledLink>
                 </StyledButton>
             </StyledContainer>
