@@ -11,22 +11,21 @@ const StyledDivWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 1rem;
-  width: 200px;
-  height: 200px;
+  width: 100%;
 `;
 
 const NoticeDetailsSelect = ({match}) => {
-  const {loading, data, error} = useQuery(GET_NOTICE, {variables: {id: match.params.notice}});
-  return (
-      <LayoutGeneral>
-          <StyledDivWrapper>
-              {loading && <Loader/>}
-              {error && <Error/>}
-              {data && <NoticeDetail notice={data.general.notice}> </NoticeDetail>}
-          </StyledDivWrapper>
-      </LayoutGeneral>
+    const {loading, data, error} = useQuery(GET_NOTICE, {variables: {id: match.params.notice}});
+    return (
+        <LayoutGeneral>
+            <StyledDivWrapper>
+                {loading && <Loader/>}
+                {error && <Error/>}
+                {data && <NoticeDetail notice={data.general.notice}> </NoticeDetail>}
+            </StyledDivWrapper>
+        </LayoutGeneral>
 
-)};
+    )
+};
 
 export default NoticeDetailsSelect;

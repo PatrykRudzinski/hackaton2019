@@ -6,6 +6,13 @@ const GET_NOTICE = gql`
             notice(id: $id) {
                 id
                 status
+                needy {
+                    displayName
+                }
+                category {
+                    name
+                    iconName
+                }
                 address {
                     id
                     geometry {
