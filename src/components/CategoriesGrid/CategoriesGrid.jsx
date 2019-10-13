@@ -4,9 +4,12 @@ import styled from "styled-components";
 
 const StyledGridWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   padding: 1rem;
+  grid-template-columns: 1fr;
+  @media (min-width: 420px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (min-width: 780px) {
     grid-template-columns: repeat(4, 1fr);;
   }
