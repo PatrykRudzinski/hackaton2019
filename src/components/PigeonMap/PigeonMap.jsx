@@ -1,5 +1,3 @@
-/*eslint-disable */
-
 import React from 'react';
 import Map from 'pigeon-maps';
 import Marker from 'pigeon-marker';
@@ -20,10 +18,9 @@ const PigeonMap = ({notice}) => {
 
     return (
         <div className="map">
-            {notice.address.properties.description}
             <Map
-                width={500}
-                height={500}
+                width='100%'
+                height='50vh'
                 defaultCenter={notice.address.geometry.coordinates.reverse()}
                 defaultZoom={13}
                 provider={getProvider}
