@@ -16,8 +16,8 @@ const StyledDivWrapper = styled.div`
   height: 200px;
 `;
 
-const NoticeDetailsSelect = ({location: {state}}) => {
-  const {loading, data, error} = useQuery(GET_NOTICE, {variables: {id: state.noticeId}});
+const NoticeDetailsSelect = ({match}) => {
+  const {loading, data, error} = useQuery(GET_NOTICE, {variables: {id: match.params.notice}});
   return (
       <LayoutGeneral>
           <StyledDivWrapper>
