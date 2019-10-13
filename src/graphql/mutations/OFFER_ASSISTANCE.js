@@ -6,10 +6,8 @@ const OFFER_ASSISTANCE = gql`
             notice {
                 id
                 createdAt
-                category
                 content
                 status
-                address
             }
         }
     }
