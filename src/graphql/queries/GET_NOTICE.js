@@ -10,6 +10,9 @@ const GET_NOTICE = gql`
                     geometry {
                         coordinates
                     }
+                    properties {
+                        description
+                    }
                 }
                 content
             }

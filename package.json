@@ -17,6 +17,8 @@
     "leaflet": "^1.5.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "pigeon-maps": "^0.14.0",
+    "pigeon-marker": "^0.3.4",
     "react": "^16.8.6",
     "react-apollo": "^2.5.4",
     "react-app-rewire-styled-components": "^3.0.2",

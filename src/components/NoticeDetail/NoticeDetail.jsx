@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryTile from "../CategoryTile";
 import styled from "styled-components";
 import OpenStreetMap from "../Map/OpenStreetMap";
+import PigeonMaps from "../PigeonMap";
 
 const StyledGridWrapper = styled.div`
   display: grid;
@@ -19,8 +20,7 @@ const StyledGridWrapper = styled.div`
 const NoticeDetail = ({notice}) => {
 
     return (
-
-        <OpenStreetMap></OpenStreetMap>
+        <PigeonMaps notice={notice}> </PigeonMaps>
     )
 };
 
