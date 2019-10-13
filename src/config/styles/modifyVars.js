@@ -7,6 +7,10 @@ module.exports = {
   '@primary-color': violetblue,
   '@layout-header-background': violetblue,
   '@layout-header-padding': '.25rem',
+  '@font-size-base': '20px',
+  '@font-size-sm': '18px',
+  '@text-color': 'fade(@black, 45%)',
+  '@text-color-secondary': 'fade(@black, 25%)',
 };
 
 /* =================================== ALL VARIABLES =======================================*/

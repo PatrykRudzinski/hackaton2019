@@ -15,11 +15,17 @@ const StyledContainer = styled.div`
   padding: 1rem;
   height: ${({theme}) => `calc(100vh - ${theme.layout.headerHeight})`};
   height: ${({theme}) => `calc(calc(var(--vh, 1vh) * 100) - ${theme.layout.headerHeight})`};
-
+  @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 const StyledButton = styled(Button)`
   min-height: 33vh !important;
+  font-weight: 550 !important;
+  @media (min-width: 768px){
+    min-height: 66vh !important;
+    }
 `;
 
 const StyledLink = styled(Link)`
