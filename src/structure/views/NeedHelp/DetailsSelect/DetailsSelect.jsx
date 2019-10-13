@@ -10,14 +10,14 @@ import {Redirect} from 'react-router-dom';
 
 const StyledWrapper = styled.div`
   padding: 2rem 1rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  width: 100%;
-  max-width: ${({theme}) => theme.layout.containerMedium};
-  margin: 0 auto;
+  // flex-grow: 1;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: stretch;
+  // justify-content: center;
+  // width: 100%;
+  // max-width: ${({theme}) => theme.layout.containerMedium};
+  // margin: 0 auto;
 `;
 
 const DetailsSelect = ({location: {state}}) => {
