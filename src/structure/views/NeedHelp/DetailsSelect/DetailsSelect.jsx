@@ -22,7 +22,7 @@ const DetailsSelect = ({location: {state}}) => {
     const submitHandler = e => {
         setError(false);
         const input = {
-            category,
+            category: category.id,
             content: e,
             address: place.id
         };
@@ -50,7 +50,7 @@ const DetailsSelect = ({location: {state}}) => {
             </Title>
             {category && (
                 <Card>
-                    Kategoria: {category}
+                    Kategoria: {category.name}
                 </Card>
             )}
             {place && (

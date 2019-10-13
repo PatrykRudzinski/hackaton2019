@@ -23,11 +23,14 @@ const CategoriesGrid = ({categories}) => {
     return (
         <StyledGridWrapper>
             {
-                categories.map(({name, iconName}) => {
+                categories.map(({id, name, iconName}) => {
                     const to = {
                         pathname: '/need-help/place-select',
                         state: {
-                            category: name,
+                            category: {
+                                id,
+                                name,
+                            },
                         }
                     };
                     return (
