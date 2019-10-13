@@ -7,6 +7,7 @@ const GET_NOTICE = gql`
                 id
                 status
                 address {
+                    id
                     geometry {
                         coordinates
                     }

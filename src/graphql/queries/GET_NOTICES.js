@@ -13,6 +13,7 @@ const GET_NOTICES = gql`
                 displayName
               }
               address {
+                id
                 properties {
                     description
                 }
