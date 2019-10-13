@@ -18,7 +18,7 @@ const OfferHelp = () => {
             {data && (
                 <>
                     <Title level={3}>
-
+                        Wybierz w czym chcesz pomóc
                     </Title>
                     <NoticesList notices={data.general.allNotices}/>
                 </>

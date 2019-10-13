@@ -11,9 +11,10 @@ const Router = () => (
             <Route path='/register' component={Register}/>
             <Route path='/login' component={Login}/>
             <PrivateRoute
-                path='/offer-help/notice-details-select'
+                path='/offer-help/notice-details-select/:notice'
                 component={NoticeDetailsSelect}
                 redirect='/login'
+                name="notice-details-select"
             />
             <PrivateRoute
                 path='/offer-help'
