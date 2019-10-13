@@ -5,7 +5,9 @@ const GET_NOTICES = gql`
         general {
             allNotices{
               id
-              category
+              category {
+                name
+              }
               content
               needy {
                 displayName

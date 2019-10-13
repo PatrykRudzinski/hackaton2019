@@ -24,7 +24,7 @@ const NoticeList = ({notices}) => {
                         }
                     };
                     return (
-                        <NoticeItem needy={needy} to={to} category={category} key={id}> </NoticeItem>
+                        <NoticeItem needy={needy} to={to} category={category.name} key={id}> </NoticeItem>
                     );
                 })
             }
