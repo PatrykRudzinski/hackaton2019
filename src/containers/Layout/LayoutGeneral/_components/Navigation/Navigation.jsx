@@ -9,7 +9,11 @@ const {Item} = Menu;
 
 const StyledItem = styled(Item)`
   border: 2px solid #7A7D80;
-`;
+  height: ${props => props.horizontal ? '' : '25vh !important'}; 
+  display: ${props => props.horizontal ? '' : 'flex !important'};
+  align-items: ${props => props.horizontal ? '' : 'center !important'};
+  justify-content: ${props => props.horizontal ? '' : 'center !important'};
+  `;
 
 
 
@@ -25,19 +29,19 @@ const Navigation = ({horizontal}) => {
 
   return (
       <Menu mode={horizontal ? 'horizontal' : 'inline'} theme={horizontal ? 'dark' : ''}>
-          <StyledItem key="1">
+          <StyledItem key="1" horizontal = {horizontal}>
             <NavLink to='/'>
               <Icon type="bell" />
               <span>Powiadomienia</span>
             </NavLink>
           </StyledItem>
-          <StyledItem key="2">
+          <StyledItem key="2" horizontal = {horizontal}>
             <NavLink to='/'>
               <Icon type="setting" />
               <span>Ustawienia</span>
             </NavLink>
           </StyledItem>
-          <StyledItem end key="3">
+          <StyledItem end key="3" horizontal = {horizontal}>
             <NavLink onClick={logOut}>
               <Icon type="poweroff"/>
               <span>Wyloguj</span>

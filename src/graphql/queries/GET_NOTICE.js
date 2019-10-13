@@ -14,6 +14,7 @@ const GET_NOTICE = gql`
                     iconName
                 }
                 address {
+                    id
                     geometry {
                         coordinates
                     }

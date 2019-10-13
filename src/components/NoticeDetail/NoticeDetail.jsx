@@ -1,6 +1,8 @@
 import React from 'react';
 import {Button, Icon} from 'antd';
 import {withRouter} from 'react-router-dom'
+import React, {useState} from 'react';
+import {Button} from 'antd';
 import {useApolloClient} from '@apollo/react-hooks';
 import PigeonMaps from "../PigeonMap";
 import OFFER_ASSISTANCE from "../../graphql/mutations/OFFER_ASSISTANCE";
@@ -24,12 +26,10 @@ const StyledContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-const StyledHeader = styled.div`
-  
-`;
 
 const NoticeDetail = ({notice, history}) => {
     const client = useApolloClient();
+
     const clickHandler = e => {
         e.preventDefault();
         client.mutate({
@@ -40,11 +40,10 @@ const NoticeDetail = ({notice, history}) => {
                 },
             }
         }).then(res => {
-            // ...
+            history.push('/offer-success');
         }).catch(err => console.error(err));
     };
 
-    console.log(notice)
     return (
         <>
             <PigeonMaps notice={notice}/>

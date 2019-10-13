@@ -19,7 +19,7 @@ const NoticeList = ({notices}) => {
                 notices.map(({id, content, category, needy}) => {
                     const to = {pathname: `/offer-help/notice-details-select/${id}`};
                     return (
-                        <NoticeItem needy={needy} to={to} category={category.name} key={id}> </NoticeItem>
+                        <NoticeItem needy={needy} to={to} category_name={category.name} category_icon={category.iconName} key={id}> </NoticeItem>
                     );
                 })
             }
