@@ -35,7 +35,7 @@ const Dashboard = () => {
         <LayoutGeneral>
             <StyledContainer>
                 <StyledButton>
-                    <StyledLink to='/need-help'>
+                    <StyledLink to='/need-help/category-select'>
                         <Help/>
                         <span>Potrzebuję pomocy</span>
                     </StyledLink>

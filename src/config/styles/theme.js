@@ -1,7 +1,10 @@
 export default {
     color : {
-        green : '#00917e',
-        white : '#fff'
+        violetblue: '#716BCD',
+        white: '#fff',
+        steel: '#7A7D80',
+        lightsteel: '#BABDC0',
+        bg: '#E3E76C',
     },
     layout : {
         containerWidth : '1400px',
