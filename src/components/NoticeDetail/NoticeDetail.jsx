@@ -12,6 +12,7 @@ const {Text} = Typography;
 const StyledButtonsWrapper = styled.div`
   display: flex;
   grid-template-columns: 1fr 1fr;
+  max-width: ${({theme}) => theme.layout.containerSmall};
   & > * {
     margin: 1rem;
     flex: 1;
@@ -22,6 +23,7 @@ const StyledContentWrapper = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  max-width: ${({theme}) => theme.layout.containerSmall};
 `;
 
 

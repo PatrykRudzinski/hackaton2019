@@ -10,6 +10,7 @@ export default {
         containerWidth : '1400px',
         headerHeight: '64px',
         containerMedium: '800px',
+        containerSmall: '640px',
     },
     font : {
         s : '0.75rem',
