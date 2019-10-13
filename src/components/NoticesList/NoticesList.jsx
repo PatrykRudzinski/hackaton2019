@@ -8,6 +8,11 @@ const StyledListWrapper = styled.div`
   flex-direction: column;
   align-items: stretch;
   padding: 1rem;
+  @media (min-width: 420px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
 `;
 
 const NoticeList = ({notices}) => {
