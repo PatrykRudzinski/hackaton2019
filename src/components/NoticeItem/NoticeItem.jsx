@@ -15,10 +15,10 @@ const StyledLink = styled(Link)`
   align-items: center;
 `;
 
-const NoticeItem = ({to, category, needy}) => (
+const NoticeItem = ({to, category_name, category_icon, needy}) => (
     <StyledButton>
         <StyledLink to={to}>
-            <b>{needy.displayName}</b>: {category}
+            <b>{needy.displayName}</b>: {category_icon} {category_name}
         </StyledLink>
     </StyledButton>
 );
