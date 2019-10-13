@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Login, Dashboard, Error, Register, NeedHelp, OfferHelp} from '../views';
-import {CategorySelect, DetailsSelect, PlaceSelect} from '../views/NeedHelp';
+import {CategorySelect, DetailsSelect, PlaceSelect, Success} from '../views/NeedHelp';
 import PrivateRoute from './_components/PrivateRoute';
 
 const Router = () => (
@@ -27,6 +27,11 @@ const Router = () => (
             <PrivateRoute
                 path='/need-help/details-select'
                 component={DetailsSelect}
+                redirect='/login'
+            />
+            <PrivateRoute
+                path='/need-help/success'
+                component={Success}
                 redirect='/login'
             />
             <PrivateRoute

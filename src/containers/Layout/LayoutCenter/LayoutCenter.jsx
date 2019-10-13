@@ -6,11 +6,11 @@ const StyledLayoutCenter = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: ${({theme, nav}) => nav ? `calc((var(--vh, 1vh) * 100) - ${theme.layout.headerHeight})` : 'calc(var(--vh, 1vh) * 100)'};
 `;
 
-const LayoutCenter = ({children}) => (
-    <StyledLayoutCenter>
+const LayoutCenter = ({children, navigation}) => (
+    <StyledLayoutCenter nav={navigation}>
         {children}
     </StyledLayoutCenter>
 );
