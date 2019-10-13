@@ -3,12 +3,18 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Login, Dashboard, Error, Register, NeedHelp, OfferHelp} from '../views';
 import {CategorySelect, DetailsSelect, PlaceSelect, Success} from '../views/NeedHelp';
 import PrivateRoute from './_components/PrivateRoute';
+import NoticeDetailsSelect from "../views/OfferHelp/NoticeDetailsSelect/NoticeDetailsSelect";
 
 const Router = () => (
     <BrowserRouter>
         <Switch>
             <Route path='/register' component={Register}/>
             <Route path='/login' component={Login}/>
+            <PrivateRoute
+                path='/offer-help/notice-details-select'
+                component={NoticeDetailsSelect}
+                redirect='/login'
+            />
             <PrivateRoute
                 path='/offer-help'
                 component={OfferHelp}
