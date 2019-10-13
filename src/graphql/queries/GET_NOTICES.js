@@ -7,6 +7,7 @@ const GET_NOTICES = gql`
               id
               category {
                 name
+                iconName
               }
               content
               needy {
