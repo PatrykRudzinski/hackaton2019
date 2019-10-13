@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom'
 import {Menu, Icon} from 'antd';
 import {withRouter} from 'react-router';
 import styled from 'styled-components';
+import Cookies from 'universal-cookie';
 
 const {Item} = Menu;
 
@@ -13,6 +14,14 @@ const StyledItem = styled(Item)`
 
 
 const Navigation = ({horizontal}) => {
+
+  const cookies = new Cookies();
+  const [redirect, setRedirect] = useState(cookies.get('token'));
+
+  const logOut = () => {
+      cookies.remove('token', {path: '/'});
+      setRedirect(false);
+  };
 
   return (
       <Menu mode={horizontal ? 'horizontal' : 'inline'}>
@@ -29,7 +38,7 @@ const Navigation = ({horizontal}) => {
             </NavLink>
           </StyledItem>
           <StyledItem end key="3">
-            <NavLink to='/'>
+            <NavLink onClick={logOut}>
               <Icon type="poweroff"/>
               <span>Wyloguj</span>
             </NavLink>
