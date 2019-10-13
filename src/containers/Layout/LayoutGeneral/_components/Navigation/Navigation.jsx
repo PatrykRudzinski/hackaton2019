@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom'
-import {Menu, Icon} from 'antd';
+import {Menu, Icon, Col} from 'antd';
 import {withRouter} from 'react-router';
 import styled from 'styled-components';
 import Cookies from 'universal-cookie';
@@ -24,10 +24,10 @@ const Navigation = ({horizontal}) => {
   };
 
   return (
-      <Menu mode={horizontal ? 'horizontal' : 'inline'}>
+      <Menu mode={horizontal ? 'horizontal' : 'inline'} theme={horizontal ? 'dark' : ''}>
           <StyledItem key="1">
             <NavLink to='/'>
-              <Icon type="home" />
+              <Icon type="bell" />
               <span>Powiadomienia</span>
             </NavLink>
           </StyledItem>
