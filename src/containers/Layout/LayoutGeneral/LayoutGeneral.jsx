@@ -13,6 +13,8 @@ const StyledContent = styled(Content)`
   max-width: ${({theme}) => theme.layout.containerWidth};
   position: relative;
   padding-top: ${({theme}) => theme.layout.headerHeight};
+  display: ${({flex}) => flex && 'flex !important'};
+  flex-direction: column;
 `;
 
 const StyledDrawer = styled(Drawer)`
@@ -29,7 +31,7 @@ const drawerConfig = {
   zIndex: 1,
 };
 
-const LayoutGeneral = ({children}) => {
+const LayoutGeneral = ({children, flex}) => {
   const [ menu, setMenu ] = useState(false);
 
   const toggleMenu = state => {
@@ -46,7 +48,7 @@ const LayoutGeneral = ({children}) => {
         menu={menu}
         toggleMenu={toggleMenu}
       />
-      <StyledContent id='drawerRoot'>
+      <StyledContent id='drawerRoot' flex>
         <StyledDrawer
           {...drawerConfig}
           placement="left"

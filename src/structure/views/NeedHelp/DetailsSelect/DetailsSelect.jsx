@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import LayoutGeneral from "../../../../containers/Layout/LayoutGeneral";
 import Title from "../../../../components/Title";
-import {Card} from "antd";
 import styled from "styled-components";
 import {useMutation} from "@apollo/react-hooks";
 import {DetailsForm} from "../../../../components";
@@ -11,6 +10,14 @@ import {Redirect} from 'react-router-dom';
 
 const StyledWrapper = styled.div`
   padding: 2rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: ${({theme}) => theme.layout.containerMedium};
+  margin: 0 auto;
 `;
 
 const DetailsSelect = ({location: {state}}) => {
@@ -31,7 +38,6 @@ const DetailsSelect = ({location: {state}}) => {
                 setError(true)
             } else {
                 setRedirect(true);
-                console.log(data.createNotice)
             }
         });
     };
@@ -44,20 +50,20 @@ const DetailsSelect = ({location: {state}}) => {
         />
     }
     return (
-        <LayoutGeneral>
+        <LayoutGeneral flex>
             <Title level={3}>
                 Opisz swój problem
             </Title>
-            {category && (
-                <Card>
-                    Kategoria: {category.name}
-                </Card>
-            )}
-            {place && (
-                <Card>
-                    Miejsce: {place.description}
-                </Card>
-            )}
+            {/*{category && (*/}
+            {/*    <Card>*/}
+            {/*        Kategoria: {category.name}*/}
+            {/*    </Card>*/}
+            {/*)}*/}
+            {/*{place && (*/}
+            {/*    <Card>*/}
+            {/*        Miejsce: {place.description}*/}
+            {/*    </Card>*/}
+            {/*)}*/}
             <StyledWrapper>
                 <DetailsForm createNotice={submitHandler}/>
             </StyledWrapper>

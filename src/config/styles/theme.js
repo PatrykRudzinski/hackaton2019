@@ -8,7 +8,8 @@ export default {
     },
     layout : {
         containerWidth : '1400px',
-        headerHeight: '64px'
+        headerHeight: '64px',
+        containerMedium: '800px',
     },
     font : {
         s : '0.75rem',

@@ -16,24 +16,22 @@ const DetailsForm = ({createNotice, form}) => {
         });
     };
     return (
-        <>
-            <Form onSubmit={submitHandle}>
-                <Item>
-                    {getFieldDecorator('details', {
-                        rules: [{required: false}],
-                    })(
-                        <TextArea
-                            autosize
-                            size="large"
-                            placeholder="Jeśli chcesz opisz dokładniej swój problem"
-                        />
-                    )}
-                </Item>
-                <ButtonLarge type="primary" htmlType="submit">
-                    Zgłoś
-                </ButtonLarge>
-            </Form>
-        </>
+        <Form onSubmit={submitHandle}>
+            <Item>
+                {getFieldDecorator('details', {
+                    rules: [{required: false}],
+                })(
+                    <TextArea
+                        autosize={{ minRows: 6, maxRows: 8 }}
+                        size="large"
+                        placeholder="Jeśli chcesz opisz dokładniej swój problem..."
+                    />
+                )}
+            </Item>
+            <ButtonLarge type="primary" htmlType="submit">
+                Dodaj prośbę
+            </ButtonLarge>
+        </Form>
     )
 };
 
