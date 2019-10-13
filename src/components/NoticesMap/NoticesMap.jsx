@@ -9,7 +9,8 @@ import Redirect from "react-router-dom/es/Redirect";
 import Cookies from "universal-cookie";
 import {withRouter} from "react-router-dom";
 
-const getProvider = (x, y, z) => `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
+// const getProvider = (x, y, z) => `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
+const getProvider = (x, y, z) => `https://maps.wikimedia.org/osm-intl/${z}/${x}/${y}.png`;
 
 
 const NoticesMap = ({notices}) => {

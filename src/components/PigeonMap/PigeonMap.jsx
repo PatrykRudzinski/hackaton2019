@@ -4,7 +4,8 @@ import Marker from 'pigeon-marker';
 
 import './PigeonMaps.styl';
 
-const getProvider = (x, y, z) => `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
+// const getProvider = (x, y, z) => `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
+const getProvider = (x, y, z) => `https://maps.wikimedia.org/osm-intl/${z}/${x}/${y}.png`;
 
 
 const PigeonMap = ({notice}) => {
