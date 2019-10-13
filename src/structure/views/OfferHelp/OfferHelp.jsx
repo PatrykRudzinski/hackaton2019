@@ -34,14 +34,14 @@ const OfferHelp = () => {
             {error && <Error/>}
             {data && (
                 <>
-                    <Title level={3}>
+                    <Title level={4}>
                         Wybierz w czym chcesz pomóc
                     </Title>
-                    <StyledButton>
-                        <StyledLink to={{pathname: '/offer-help/map'}}>
-                            Widok mapy
-                        </StyledLink>
-                    </StyledButton>
+                    {/*<StyledButton>*/}
+                        {/*<StyledLink to={{pathname: '/offer-help/map'}}>*/}
+                            {/*Widok mapy*/}
+                        {/*</StyledLink>*/}
+                    {/*</StyledButton>*/}
                     <NoticesList notices={data.general.allNotices}/>
                 </>
             )}
