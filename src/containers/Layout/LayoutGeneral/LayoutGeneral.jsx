@@ -6,13 +6,13 @@ import {Layout, Drawer} from 'antd';
 const {Content} = Layout;
 
 const StyledContent = styled(Content)`
-  padding-top: ${({theme}) => theme.layout.headerHeight};
   margin: 0 auto;
   width: 100%;
   min-height: 100vh !important;
   min-height: calc(var(--vh, 1vh) * 100) !important;
   max-width: ${({theme}) => theme.layout.containerWidth};
   position: relative;
+  padding-top: ${({theme}) => theme.layout.headerHeight};
 `;
 
 const StyledDrawer = styled(Drawer)`
