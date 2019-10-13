@@ -18,6 +18,7 @@ const StyledHeader = styled(AntHeader)`
 
 const StyledIcon = styled(Icon)`
   font-size: 1.25rem;
+  color: white;
   padding: 1rem;
 `;
 
